@@ -7,21 +7,15 @@ import { Observable, of, delay } from 'rxjs';
 })
 export class UserService {
 
-  private roleAnonymus = false;
-  private roleUser = false;
-  private roleAdmin = false;
+  private role= ['user']
 
-  constructor(private ROUTER: Router) { }
-
-  showRole(role: string): void {
-    if (role === 'anonymus') {
-      this.roleAnonymus = true;
-    } else if (role === 'user') {
-      this.roleUser = true;
-    } else if (role === 'admin') {
-      this.roleAdmin = true;
-    }
+  constructor() { 
+    
   }
+
+getRole(){
+  return this.role;
+} 
 
 }
 

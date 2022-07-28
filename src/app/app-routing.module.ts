@@ -10,11 +10,11 @@ const ROUTES: Routes = [
   { path: 'home', component: HomepageComponent },
 
   { path: 'admin', component: AdminpageComponent, canActivate: [IsAdminGuard], data:{
-    roles: ['admin']
+    expectedRoles: ['admin']
   } },
 
   { path: 'dashboard', component: DashboardpageComponent, canActivate: [IsConnectedGuard, IsAdminGuard], data:{
-    roles: ['admin', 'user'] }},
+    rexpectedRoles: ['admin', 'user'] }},
 
 ];
 
