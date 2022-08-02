@@ -17,7 +17,7 @@ export class IsConnectedGuard implements CanActivate {
  } 
 
   private isAuthorised(route: ActivatedRouteSnapshot) : boolean {
-    const roles = ['user'];
+    const roles = this.userService.getRole();
     const expectedRoles = route.data['expectedRoles'];
     const roleMatches = roles.findIndex(role => expectedRoles.indexOf(role) !== -1);
     return roleMatches < 0 ? false : true;

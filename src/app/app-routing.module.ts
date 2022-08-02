@@ -14,7 +14,7 @@ const ROUTES: Routes = [
   } },
 
   { path: 'dashboard', component: DashboardpageComponent, canActivate: [IsConnectedGuard, IsAdminGuard], data:{
-    rexpectedRoles: ['admin', 'user'] }},
+    expectedRoles: ['admin', 'user'] }},
 
 ];
 
